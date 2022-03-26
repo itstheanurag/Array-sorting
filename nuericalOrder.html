@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="center">
+        <p>
+          Click The given buttons to sort the Array accordingly :
+          [2,3,5,21,56,767,87,34,65,76, 123,12,17,349]
+        </p>
+        <br />
+        <div class="btn1 container">
+          <button class="btn" onclick="ascend()">ascend</button>
+          <button class="btn" onclick="descend()">descend</button>
+          <button class="btn" onclick="alphabetical()">
+            Lexicographic order
+          </button>
+        </div>
+        <br />
+        <div class="container">
+          <div id="func"><br /></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const num = [2, 3, 5, 21, 56, 767, 87, 34, 65, 76, 123, 12, 17, 349];
+
+    function ascend() {
+      num.sort(function (a, b) {
+        return a - b;
+      });
+      document.getElementById("func").innerHTML = num;
+    }
+
+    function descend() {
+      num.sort(function (a, b) {
+        return b - a;
+      });
+      document.getElementById("func").innerHTML = num;
+    }
+
+    function alphabetical() {
+      num.sort();
+      document.getElementById("func").innerHTML = num;
+    }
+  </script>
+</html>
